@@ -50,12 +50,12 @@ export function SurgicalForm({
     { id: "Orthopaedic", name: "Orthopaedic" },
     {
       id: "Oral_and_Maxillofacial_and_Dentistry",
-      name: "Oral and Maxillofacial and Dentistry",
+      name: "Oral",
     },
-    { id: "Otolaryngic_ENT", name: "Otolaryngic ENT" },
-    { id: "Urologic", name: "Urologic" },
+    { id: "Otolaryngic_ENT", name: "ENT" },
+    { id: "Urologic", name: "Urology" },
     { id: "Vascular", name: "Vascular" },
-    { id: "Plastic_and_Reconstructive", name: "Plastic and Reconstructive" },
+    { id: "Plastic_and_Reconstructive", name: "Plastic" },
   ]
 
   const performanceLevels = {

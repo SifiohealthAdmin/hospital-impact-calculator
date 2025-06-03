@@ -38,11 +38,11 @@ const serviceCategories = {
   Neurosurgery: "Neurosurgery",
   Ophthalmic: "Ophthalmology",
   Orthopaedic: "Orthopaedic",
-  Oral_and_Maxillofacial_and_Dentistry: "Oral and Maxillofacial and Dentistry",
-  Otolaryngic_ENT: "Otolaryngic ENT",
-  Urologic: "Urologic",
+  Oral_and_Maxillofacial_and_Dentistry: "Oral",
+  Otolaryngic_ENT: "ENT",
+  Urologic: "Urology",
   Vascular: "Vascular",
-  Plastic_and_Reconstructive: "Plastic and Reconstructive",
+  Plastic_and_Reconstructive: "Plastic",
 }
 
 export function DetailedReport({ departmentDetails }: DetailedReportProps) {
