@@ -34,7 +34,7 @@ type DetailedReportProps = {
 const serviceCategories = {
   Cardiac: "Cardiac",
   General: "General",
-  Gynaecologic: "Gynaecologic",
+  Gynaecologic: "Gynaecology",
   Neurosurgery: "Neurosurgery",
   Ophthalmic: "Ophthalmology",
   Orthopaedic: "Orthopaedic",

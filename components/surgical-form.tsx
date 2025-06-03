@@ -44,7 +44,7 @@ export function SurgicalForm({
   const serviceCategories = [
     { id: "Cardiac", name: "Cardiac" },
     { id: "General", name: "General" },
-    { id: "Gynaecologic", name: "Gynaecologic" },
+    { id: "Gynaecologic", name: "Gynaecology" },
     { id: "Neurosurgery", name: "Neurosurgery" },
     { id: "Ophthalmic", name: "Ophthalmology" },
     { id: "Orthopaedic", name: "Orthopaedic" },
