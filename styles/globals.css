@@ -92,3 +92,8 @@ body {
     @apply bg-background text-foreground;
   }
 }
+/* cabot new fix */
+.text-3xl {
+    font-size: 60px;
+    line-height: 100%;
+}
