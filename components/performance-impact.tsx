@@ -53,7 +53,7 @@ export function PerformanceImpact({ data }: PerformanceImpactProps) {
     isCurrency?: boolean
   }) => (
     <div
-      className="flex items-center p-4 rounded-lg border border-transparent"
+      className="flex items-center p-4 rounded-lg border border-transparent mb-result-card"
       style={{ borderBottom: "1px solid #B5CBBF38" }}
     >
       <div

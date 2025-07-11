@@ -161,7 +161,7 @@ export function SurgicalForm({
         <div className="space-y-8">
           <div className="space-y-4 question-block">
             <p className="font-bold text-lg">1. Type of Surgical Department</p>
-            <div className="grid md:grid-cols-2 gap-6 items-start">
+            <div className="grid md:grid-cols-2 gap-6 items-start s-mt-12">
               <Label className="text-sm text-gray-700">
                 Select the type of healthcare facility where surgeries are
                 performed:
@@ -193,7 +193,7 @@ export function SurgicalForm({
 
 
 <div className="question-block">
-<p className="font-bold text-lg">
+<p className="font-bold text-lg s-mb-12">
             2. Standard Surgical Block Duration
           </p>
           <div className="grid md:grid-cols-2 gap-6 items-start">
@@ -271,7 +271,7 @@ export function SurgicalForm({
                 return (
                     <div
                       key={id}
-                      className="grid md:grid-cols-2 gap-6 items-start"
+                      className="grid md:grid-cols-2 gap-6 items-start s-mt-12"
                     >
                       <Label className="text-sm text-gray-700">
                         Enter the total number of surgical cases performed per
@@ -300,7 +300,7 @@ export function SurgicalForm({
  <p className="font-bold text-lg">
             5. Financial Value per OR Block Minute
           </p>
-          <div className="grid md:grid-cols-2 gap-6 items-start">
+          <div className="grid md:grid-cols-2 gap-6 items-start s-mt-12">
             <Label className="text-sm text-gray-700">
               Select the average cost savings or revenue generated per minute of
               OR time:
@@ -334,7 +334,7 @@ export function SurgicalForm({
  <p className="font-bold text-lg">
             6. Current and Targeted Department Performance
           </p>
-          <div className="grid md:grid-cols-2 gap-6 items-start">
+          <div className="grid md:grid-cols-2 gap-6 items-start s-mt-12">
             <Label className="text-sm text-gray-700">
               How does the department currently perform?
             </Label>
@@ -367,13 +367,11 @@ export function SurgicalForm({
                 )}
             </div>
           </div>
-</div>
-         
-
-          <div className="grid md:grid-cols-2 gap-6 items-start question-block">
+           <div className="grid md:grid-cols-2 gap-6 items-start s-mt-16">
             <Label className="text-sm text-gray-700">
               What benchmark would you like to compare it to?
-            </Label>
+            </Label> 
+          
             <div>
               <Select
                 value={formik.values.comparisonLevel}
@@ -404,6 +402,10 @@ export function SurgicalForm({
                 )}
             </div>
           </div>
+</div>
+         
+
+         
 
           <div className="flex justify-center">
             <Button

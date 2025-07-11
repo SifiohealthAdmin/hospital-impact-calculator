@@ -168,7 +168,7 @@ export function EmailVerification() {
           <strong>Planning Accuracy</strong>,{" "}
           <strong>Resource Smoothing</strong>, and{" "}
           <strong>Duration Prediction</strong>. or{" "}
-          <a
+          <br></br><a
             href="https://share.hsforms.com/2ILISPQpWSP6DHAWdHo54qgebhsr"
             target="_blank"
             rel="noopener noreferrer"
