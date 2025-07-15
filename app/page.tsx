@@ -12,7 +12,7 @@ const SurgicalEstimator = dynamic(
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white py-12">
+    <main className="min-h-screen bg-white">
       <Suspense
         fallback={
           <div className="flex justify-center items-center h-screen">
