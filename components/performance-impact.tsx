@@ -53,20 +53,21 @@ export function PerformanceImpact({ data }: PerformanceImpactProps) {
     isCurrency?: boolean
   }) => (
     <div
-      className="flex items-center p-4 rounded-lg border border-transparent"
+      className="flex items-center p-4 rounded-lg border border-transparent mb-result-card"
       style={{ borderBottom: "1px solid #B5CBBF38" }}
     >
       <div
-        className="flex items-center justify-center bg-[#2C615017] text-[#2C6150] px-4 py-4 rounded-lg mr-4 min-w-[25%]"
+        className="flex items-center justify-center result-chip px-4 py-4 rounded-lg mr-4 min-w-[25%]"
         style={{
           borderRadius: "22px",
           boxShadow: "0px 4px 4px 0px #2C615017",
+
         }}
       >
-        <span className="text-3xl font-bold leading-tight">
+        <span className="text-3xl font-bold leading-tight d-block text-center">
           {isCurrency ? formatRoundedCurrency(value) : formatNumber(value)}
         </span>
-        {unit && <span className="text-sm ml-1">{unit}</span>}
+        {unit && <span className="text-sm ml-1 d-block text-center">{unit}</span>}
       </div>
       <div>
         <h3 className="font-semibold text-base text-gray-900">{title}</h3>
@@ -100,7 +101,7 @@ export function PerformanceImpact({ data }: PerformanceImpactProps) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="p-6 shadow-sm border rounded-lg">
+      <Card className="p-6 shadow-sm border rounded-lg result-parent-wrap">
         <div className="text-center mb-6">
           <h2 className="text-2xl font-bold text-gray-900">
             Your Surgery Department’s Performance Impact

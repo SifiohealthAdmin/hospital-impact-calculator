@@ -159,9 +159,9 @@ export function SurgicalForm({
     <Card className="p-6 shadow-sm border rounded-lg">
       <form onSubmit={formik.handleSubmit}>
         <div className="space-y-8">
-          <div className="space-y-4">
+          <div className="space-y-4 question-block">
             <p className="font-bold text-lg">1. Type of Surgical Department</p>
-            <div className="grid md:grid-cols-2 gap-6 items-start">
+            <div className="grid md:grid-cols-2 gap-6 items-start s-mt-12">
               <Label className="text-sm text-gray-700">
                 Select the type of healthcare facility where surgeries are
                 performed:
@@ -191,7 +191,9 @@ export function SurgicalForm({
             </div>
           </div>
 
-          <p className="font-bold text-lg">
+
+<div className="question-block">
+<p className="font-bold text-lg s-mb-12">
             2. Standard Surgical Block Duration
           </p>
           <div className="grid md:grid-cols-2 gap-6 items-start">
@@ -221,13 +223,15 @@ export function SurgicalForm({
               )}
             </div>
           </div>
-
-          <p className="font-bold text-lg">3. Surgical Services Offered</p>
-          <div>
+</div>
+          
+<div className="question-block">
+  <p className="font-bold text-lg">3. Surgical Services Offered</p>
+          <div className="s-mt-12">
             <Label className="text-sm text-gray-700">
               Select all surgical specialties supported by the department:
             </Label>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 s-mt-12">
               {serviceCategories.map((cat) => {
                 const isSelected = selectedServices.includes(cat.id)
                 return (
@@ -235,7 +239,7 @@ export function SurgicalForm({
                     key={cat.id}
                     type="button"
                     onClick={() => toggleService(cat.id)}
-                    className={`px-4 py-2 border rounded-md ${
+                    className={`px-4 py-2 border rounded-md form-chip ${
                       isSelected
                         ? "bg-magnet-faint text-primary"
                         : "hover:bg-gray-50"
@@ -252,9 +256,12 @@ export function SurgicalForm({
               </p>
             )}
           </div>
+</div>
+        
 
-          {selectedServices.length > 0 && (
-            <div className="space-y-4">
+{selectedServices.length > 0 && (
+  
+            <div className="space-y-4 question-block">
               <p className="font-bold text-lg">
                 4. Annual Surgical Case Volume
               </p>
@@ -262,10 +269,9 @@ export function SurgicalForm({
                 const service =
                   serviceCategories.find((s) => s.id === id)?.name || id
                 return (
-                  <>
                     <div
                       key={id}
-                      className="grid md:grid-cols-2 gap-6 items-start"
+                      className="grid md:grid-cols-2 gap-6 items-start s-mt-12"
                     >
                       <Label className="text-sm text-gray-700">
                         Enter the total number of surgical cases performed per
@@ -283,16 +289,18 @@ export function SurgicalForm({
                         }
                         placeholder="Enter number of cases"
                       />
-                    </div>{" "}
-                  </>
+                    </div>
                 )
               })}
             </div>
           )}
-          <p className="font-bold text-lg">
+
+          
+          <div className="question-block">
+ <p className="font-bold text-lg">
             5. Financial Value per OR Block Minute
           </p>
-          <div className="grid md:grid-cols-2 gap-6 items-start">
+          <div className="grid md:grid-cols-2 gap-6 items-start s-mt-12">
             <Label className="text-sm text-gray-700">
               Select the average cost savings or revenue generated per minute of
               OR time:
@@ -320,11 +328,13 @@ export function SurgicalForm({
               )}
             </div>
           </div>
-
-          <p className="font-bold text-lg">
+          </div>
+         
+<div className="question-block">
+ <p className="font-bold text-lg">
             6. Current and Targeted Department Performance
           </p>
-          <div className="grid md:grid-cols-2 gap-6 items-start">
+          <div className="grid md:grid-cols-2 gap-6 items-start s-mt-12">
             <Label className="text-sm text-gray-700">
               How does the department currently perform?
             </Label>
@@ -357,11 +367,11 @@ export function SurgicalForm({
                 )}
             </div>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-6 items-start">
+           <div className="grid md:grid-cols-2 gap-6 items-start s-mt-16">
             <Label className="text-sm text-gray-700">
               What benchmark would you like to compare it to?
-            </Label>
+            </Label> 
+          
             <div>
               <Select
                 value={formik.values.comparisonLevel}
@@ -392,18 +402,22 @@ export function SurgicalForm({
                 )}
             </div>
           </div>
+</div>
+         
+
+         
 
           <div className="flex justify-center">
             <Button
               type="submit"
-              className="text-magnet border-magnet hover:bg-magnet hover:text-white px-8"
+              className="text-magnet border-magnet hover:bg-magnet hover:text-white px-8 pine-button"
               disabled={loading}
               variant="outline"
             >
               {loading ? (
                 <span className="animate-pulse">Calculating...</span>
               ) : (
-                <strong>CALCULATE IMPACT</strong>
+                <strong>Calculate Impact Now</strong>
               )}
             </Button>
           </div>

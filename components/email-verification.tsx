@@ -158,7 +158,7 @@ export function EmailVerification() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="p-6 rounded-lg mb-6 text-center">
+      <div className="p-6 rounded-lg mb-6 text-center form-intro-card">
         <h2 className="text-2xl font-bold text-gray-900">
           Get Your Customized Report
         </h2>
@@ -168,7 +168,7 @@ export function EmailVerification() {
           <strong>Planning Accuracy</strong>,{" "}
           <strong>Resource Smoothing</strong>, and{" "}
           <strong>Duration Prediction</strong>. or{" "}
-          <a
+          <br></br><a
             href="https://share.hsforms.com/2ILISPQpWSP6DHAWdHo54qgebhsr"
             target="_blank"
             rel="noopener noreferrer"
@@ -180,7 +180,7 @@ export function EmailVerification() {
         </p>
       </div>
 
-      <Card className="p-6 shadow-sm border rounded-lg max-w-xl mx-auto text-center">
+      <Card className="p-6 shadow-sm border rounded-lg mx-auto text-center">
         {isGeneratingReport ? (
           <div className="flex flex-col items-center gap-4">
             <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -206,7 +206,7 @@ export function EmailVerification() {
             }}
           >
             <div className="grid grid-cols-2 gap-4">
-              <div>
+              <div className="form-labelling">
                 <Label htmlFor="firstName">First Name</Label>
                 <Input
                   id="firstName"
@@ -221,7 +221,7 @@ export function EmailVerification() {
                   </p>
                 )}
               </div>
-              <div>
+              <div className="form-labelling">
                 <Label htmlFor="lastName">Last Name</Label>
                 <Input
                   id="lastName"
@@ -238,7 +238,7 @@ export function EmailVerification() {
               </div>
             </div>
 
-            <div>
+            <div className="form-labelling">
               <Label htmlFor="organizationName">Organization Name</Label>
               <Input
                 id="organizationName"
@@ -255,7 +255,7 @@ export function EmailVerification() {
                 )}
             </div>
 
-            <div>
+            <div className="form-labelling">
               <Label htmlFor="email">Your Email</Label>
               <Input
                 id="email"

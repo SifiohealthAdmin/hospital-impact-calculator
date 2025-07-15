@@ -100,22 +100,7 @@ export default function SurgicalEstimator() {
   }
 
   return (
-    <div className="container mx-auto px-4 max-w-4xl">
-      <div className="text-center mb-6">
-        <h1 className="text-3xl font-bold text-gray-900">
-          Surgical Performance Estimator
-        </h1>
-        <p className="text-gray-600 mt-2 text-left ">
-          This short calculator uses six key inputs to assess workflow
-          efficiency and identify potential improvements in surgical scheduling,
-          throughput, and resource use. By comparing your current state to
-          top-performing benchmarks, you'll gain insights into additional
-          surgical capacity and financial impact—based on real-world data from
-          over 80 surgical centers. Please answer the following questions to
-          generate your personalized efficiency snapshot.
-        </p>
-      </div>
-
+    <div>
       <div className="space-y-8">
         <SurgicalForm onCalculate={handleCalculate} />
         <AnimatePresence mode="wait">
